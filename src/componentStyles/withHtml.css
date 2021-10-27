@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Consolas";
+    src: local("Consolas"),
+        url("../fonts/consolas/CONSOLA.TTF") format("truetype");
+    font-weight: normal;
+}
+
+code {
+    font-family: Consolas;
+    font-size: 0.75rem;
+}
+
+.code {
+    display: flex;
+    flex-direction: column;
+}
+
+.code__children {
+    padding-left: 0.75rem;
+}
+
+    .code__braces {
+        color: #808080;
+    }
+
+    .code__element {
+        color: #569CD6;
+    }
+
+    .code__attribute {
+        color: #9CDCFE;
+    }
+
+    .code__attribute-value {
+        color: #CE9078
+    }
+
+    .code__equal {
+        color: #D4D4D4;
+    }
+
