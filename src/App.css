@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #E1E5E9;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,6 +20,7 @@ a {
 }
 
 .landing__left-links, .landing__right-links {
+  font-size: 0.875rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -37,5 +39,58 @@ a {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  margin: 0 10px;
+  padding: 0;
+  transition: all linear 0.1s;
+}
+
+/*Link rainbow underline styling*/
+
+a, .link {
+  position: relative;
+  text-decoration: none;
+}
+
+a:before, .link:before {
+  opacity: .6;
+}
+
+a:after, a:before, .link:after, .link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition-duration: .35s;
+  transition-timing-function: ease;
+  transition-property: background-position,transform;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+a:hover:after, .link:hover:after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+a:after, .link:after {
+  transform: scaleX(0);
+  transform-origin: right center;
+  animation: GradientScroll 2s linear infinite;
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+          140deg,#d97d01,#01928f 40%,#01928f 50%,#9e81d2 60%,#d97d01 80%,#d97d01);
+}
+
+@keyframes GradientScroll {
+  0% {
+    background-position: 0 0
+  }
+
+  to {
+    background-position: -200% 0
+  }
 }

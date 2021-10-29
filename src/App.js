@@ -4,17 +4,17 @@ import LangToggleButton from './components/LangToggleButton'
 import WithHtml from "./components/WithHtml";
 
 function App() {
-  const [lang, setLang] = useState('En')
+  const [lang, setLang] = useState('EN')
 
   return (
     <div className="App">
       <div className='landing-page'>
         <div className='landing__left-links'>
           <WithHtml element='a' attributes={{href: '#work'}}>
-            <a href="#work">Work</a>
+            <a href="#work">WORKS</a>
           </WithHtml>
           <WithHtml element='a' attributes={{href: '#about'}}>
-            <a href="#about">About</a>
+            <a href="#about">ABOUT</a>
           </WithHtml>
         </div>
         <div className='landing__main-text'>
@@ -23,12 +23,12 @@ function App() {
         </div>
         <div className='landing__right-links'>
           <div className='language-toggler'>
-            <LangToggleButton lang={lang} setLang={setLang} buttonLang={'Ru'} />
-            <LangToggleButton lang={lang} setLang={setLang} buttonLang={'En'} />
+            <LangToggleButton lang={lang} setLang={setLang} buttonLang={'RU'} />
+            <LangToggleButton lang={lang} setLang={setLang} buttonLang={'EN'} />
           </div>
           <div className='landing__mail-link'>
             <WithHtml element='a' attributes={{href: "mailto:lavrovslava207@gmail.com"}}>
-              <a href="mailto:lavrovslava207@gmail.com">Mail</a>
+              <a href="mailto:lavrovslava207@gmail.com">MAIL</a>
             </WithHtml>
           </div>
         </div>
