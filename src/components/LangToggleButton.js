@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 
 let LangButton = styled.button`
-  ${({chosen}) => chosen && 'font-size: 1rem; font-weight: 600;'}
+  ${({chosen}) => chosen && 'font-size: 1rem; font-weight: 500;'}
 `
 
 function langToggleButton({lang, setLang, buttonLang}) {

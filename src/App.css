@@ -1,6 +1,11 @@
 body {
   margin: 0;
   background-color: #E1E5E9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,12 +16,44 @@ a {
   color: #2b2b2b;
 }
 
+.landing__main-text {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.landing__main-text h1, .landing__main-text h2 {
+  font-weight: 500;
+}
+
+.landing__main-text h1 {
+  font-size: 4rem;
+}
+
+.landing__main-header .code {
+  background-color: #1E1E1E;
+  color: #D4D4D4;
+  padding: 10px;
+}
+
+.landing__main-header .code__children {
+  padding-left: 1rem;
+}
+
+.landing__main-header code {
+  font-size: 1.2rem;
+}
+
+.landing__main-header h1 {
+  line-height: 1;
+}
+
 .landing-page {
   width: calc(100vw - 120px);
   height: calc(100vh - 120px);
   padding: 60px;
   display: grid;
-  grid-template-columns: 120px 1fr 120px;
+  grid-template-columns: 1fr 6fr 1fr;
 }
 
 .landing__left-links, .landing__right-links {
@@ -31,7 +68,7 @@ a {
 }
 
 .landing__mail-link {
-  writing-mode: vertical-rl;
+  writing-mode:   vertical-rl;
   transform: rotate(180deg);
 }
 
@@ -42,10 +79,10 @@ a {
   font-size: 0.875rem;
   margin: 0 10px;
   padding: 0;
-  transition: all linear 0.1s;
+  transition: all linear 50ms;
 }
 
-/*Link rainbow underline styling*/
+/* Link rainbow underline styling */
 
 a, .link {
   position: relative;

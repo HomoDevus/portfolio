@@ -18,8 +18,14 @@ function App() {
           </WithHtml>
         </div>
         <div className='landing__main-text'>
-          <h2>Slava Lavrov</h2>
-          <h1>Front-end Developer</h1>
+          <WithHtml element='h2'>
+            <h2>Slava Lavrov</h2>
+          </WithHtml>
+          <div className='landing__main-header'>
+            <WithHtml element='h1'>
+              <h1>Front-end Developer</h1>
+            </WithHtml>
+          </div>
         </div>
         <div className='landing__right-links'>
           <div className='language-toggler'>
@@ -28,7 +34,7 @@ function App() {
           </div>
           <div className='landing__mail-link'>
             <WithHtml element='a' attributes={{href: "mailto:lavrovslava207@gmail.com"}}>
-              <a href="mailto:lavrovslava207@gmail.com">MAIL</a>
+              <a href="mailto:lavrovslava207@gmail.com" onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>MAIL</a>
             </WithHtml>
           </div>
         </div>
