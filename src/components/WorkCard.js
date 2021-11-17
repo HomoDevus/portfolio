@@ -10,7 +10,7 @@ export default function WorkCard() {
                 <p className='works__card-date'>00 / 00</p>
             </div>
             <div className='works__card__gif-cover'>
-                <img src={wordCounter}
+                <img src={wordCounter} />
                 {/*<div className='works__card__gif'></div>*/}
                 {/*<div className='works__card__gif-cover__text'>*/}
                 {/*    Aenean convallis ultricies mollis. In hac habitasse platea dictumst. Cras metus enim,*/}
