@@ -1,5 +1,5 @@
 import './css/App.css';
-import './works.css';
+import './css/works.css';
 import {useState} from "react";
 import LangToggleButton from './components/LangToggleButton'
 // import WithHtml from "./components/WithHtml";

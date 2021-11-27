@@ -1,0 +1,35 @@
+@keyframes GradientScroll {
+  0% {
+    background-position: 0 0
+  }
+
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes LeftBarSlide {
+  from {
+    left: -240px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes RightBarSlide {
+  from {
+    right: -240px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes HeadingBackground {
+  from {width: 0%;}
+  1% {padding: 0 8px;}
+  to {width: 100%; padding: 0 8px;}
+}

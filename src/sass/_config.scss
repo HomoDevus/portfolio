@@ -1,0 +1,17 @@
+$black: #2b2b2b;
+$light-gray: #D5D7D4;
+$rainbow-gradient: linear-gradient(140deg,#d97d01,#01928f 40%,#01928f 50%,#9e81d2 60%,#d97d01 80%,#d97d01);
+$animation-rise: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+@mixin card-grid-position($child, $rows: 0, $columns: 0) {
+    .works__card {
+        &:nth-child(#{$child}) {
+            @if ($rows != 0) {
+                grid-row: auto / span $rows;
+            }
+            @if ($columns != 0) {
+                grid-column: auto / span $columns;
+            }
+        }
+    }
+}
