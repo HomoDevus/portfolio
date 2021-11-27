@@ -1,10 +1,20 @@
 @keyframes GradientScroll {
   0% {
-    background-position: 0 0
+    background-position: 0 0;
   }
 
   to {
-    background-position: -200% 0
+    background-position: -200% 0;
+  }
+}
+
+@keyframes ImageGradient {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 200% 0;
   }
 }
 

@@ -12,6 +12,14 @@ $animation-rise: cubic-bezier(0.22, 0.61, 0.36, 1);
             @if ($columns != 0) {
                 grid-column: auto / span $columns;
             }
+
+            // .glow:hover:before {
+            //     @if ($columns > 1) {
+            //         transform: translateZ(0) scaleX(1.01) scaleY(1.015);
+            //     } @else {
+            //         transform: translateZ(0) scaleX(1.02) scaleY(1.01);
+            //     }
+            // }
         }
     }
 }
