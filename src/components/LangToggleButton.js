@@ -1,9 +1,4 @@
 import React from "react";
-import styled from 'styled-components'
-
-let LangButton = styled.button`
-  ${({chosen}) => chosen && 'font-weight: 500; color: black!important;'}
-`
 
 function langToggleButton({lang, setLang, buttonLang}) {
     function langChange() {
@@ -12,15 +7,16 @@ function langToggleButton({lang, setLang, buttonLang}) {
         }
     }
 
+    let isButtonChosen = buttonLang === lang
+
     return (
-        <LangButton
-            className='language-toggle-button link'
+        <button
+            className={`language-toggle-button ${isButtonChosen && 'chosen'} link`}
             id={lang === buttonLang ? 'active-lang': ''}
             onClick={langChange}
-            chosen={buttonLang === lang}
         >
             {buttonLang}
-        </LangButton>
+        </button>
     )
 }
 
