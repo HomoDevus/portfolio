@@ -1,11 +1,32 @@
 @import 'config';
 @import 'keyframes';
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/fonts/Inter/Inter.var.woff2') format('woff2 supports variations'),
+  url('/src/fonts/Inter/Inter.var.woff2') format('woff2-variations');
+  font-variation-settings: normal;
+}
+
+@font-face {
+  font-family: 'Inter var experimental';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("/src/fonts/Inter/Inter.var.woff2?v=3.19") format("woff2");
+}
+
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var experimental', sans-serif;
+  }
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   background-color: $light-gray;
-  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
@@ -13,8 +34,16 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-a {
+a, .language-toggle-button {
   color: $black;
+  transition: all linear 0.2s;
+  font-variation-settings: 'wght' 300;
+  letter-spacing: 0em;
+
+  &:hover {
+    letter-spacing: -0.02em;
+    font-variation-settings: 'wght' 500;
+  }
 }
 
 .landing-page {
@@ -25,6 +54,7 @@ a {
   position: relative;
 
   .landing__main-text {
+    font-weight: 200;
     font-size: 4rem;
     line-height: 1.2;
     position: absolute;
@@ -35,8 +65,7 @@ a {
     box-sizing: border-box;
     overflow: no-display;
     max-height: 100vh;
-    font-weight: 300;
-  
+
     &__heading {
       position: relative;
       display: inline-block;

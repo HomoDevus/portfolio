@@ -9,18 +9,18 @@ function App() {
   const [lang, setLang] = useState('EN')
 
   return (
-    <div className="App">
+    <main className="App">
         <div className='landing-page'>
-            <div className='landing__left-links__outer'>
-                <div className='landing__left-links'>
+            <aside className='landing__left-links__outer'>
+                <nav className='landing__left-links'>
                     <div className='landing__link-outer top left'>
                         <a href="#work">WORKS</a>
                     </div>
                     <div className='landing__link-outer bottom left'>
                         <a href="#about">ABOUT</a>
                     </div>
-                </div>
-            </div>
+                </nav>
+            </aside>
             <div className='landing__main'>
                 <div className='landing__main-text'>
                     isque eleifend, neque eget posuere ultricies, nulla tellus bibendum augue,
@@ -28,7 +28,7 @@ function App() {
                     pretium felis. Sed at velit non erat finibus elementum at a neque. Mauris
                     bibendum auctor dignissim. Etiam convallis lacus enim, at pretium urna dictum vel.
                     Aenean molestie sem qu
-                    <span className='landing__main-text__heading' data-text='Slava&nbsp;Lavrov'>Slava&nbsp;Lavrov</span>fermentum
+                    <span className='landing__main-text__heading' data-text='Slava&nbsp;Lavrov'>Slava&nbsp;Lavrov</span>
                     hendrerit id eget metus. Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. in lorem et arcu facilisis
                     <span className='landing__main-text__heading' data-text='Frontend&nbsp;Developer'>Frontend&nbsp;Developer</span>
@@ -41,8 +41,8 @@ function App() {
                     Donec sit amet magna tortor. Aenean at risus rhoncus, facilisis ex et, ultricies neque.
                 </div>
             </div>
-            <div className='landing__right-links__outer'>
-                <div className='landing__right-links'>
+            <aside className='landing__right-links__outer'>
+                <nav className='landing__right-links'>
                     <div className='language-toggler landing__link-outer top right'>
                         <LangToggleButton lang={lang} setLang={setLang} buttonLang={'RU'} />
                         <LangToggleButton lang={lang} setLang={setLang} buttonLang={'EN'} />
@@ -52,8 +52,8 @@ function App() {
                             () => {navigator.clipboard.writeText(this.state.textToCopy)}
                         }>MAIL</a>
                     </div>
-                    </div>
-                </div>
+                    </nav>
+                </aside>
             </div>
         <div className='works' id='works'>
             <WorkCard />
@@ -61,7 +61,7 @@ function App() {
             <WorkCard />
             <WorkCard />
         </div>
-    </div>
+    </main>
   );
 }
 
