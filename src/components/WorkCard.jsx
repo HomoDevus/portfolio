@@ -2,9 +2,9 @@ import React from 'react'
 import arrow from '../img/arrow_icon.svg'
 // import wordCounter from '../img/word-counter.gif'
 
-export default function WorkCard() {
+export default function WorkCard({placingClass}) {
     return (
-        <div className='works__card'>
+        <div className={`works__card ${placingClass}`}>
             <div className='works__card__top'>
                 <div className='works__card-name'>Minesweeper</div>
                 <p className='works__card-date'>00 / 00</p>
@@ -20,12 +20,14 @@ export default function WorkCard() {
                 {/*    Maecenas vitae malesuada justo, a eleifend purus.*/}
                 {/*</div>*/}
             </div>
-            <div className='works__card__footer'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida fermentum ultricies.
-                    In vel lacus sem.
-                </p>
-                <img alt="left arrow" src={arrow} className='works__card__footer__arrow' />
+            <div className='works__card__footer-container'>
+                <div className='works__card__footer'>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida fermentum ultricies.
+                        In vel lacus sem.
+                    </p>
+                    <img alt="left arrow" src={arrow} className='works__card__footer__arrow'/>
+                </div>
             </div>
         </div>
     )

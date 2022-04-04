@@ -1,24 +1,45 @@
 @import 'config';
 @import 'keyframes';
+@import 'variables';
 
 .works {
     background-color: $black;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(14, 100px);
-    gap: 82px;
+    grid-template-columns: repeat(12, 1fr);
+    //grid-auto-rows: 100px;
+    // Makes grid elements height equal to their width regardless of the width
+    grid-auto-rows: calc((100vw - (140px * 2) - (80px * 11)) / 12);
+    gap: $works-gap;
+    grid-auto-flow: dense;
     padding: 120px 140px;
 
-    &__card__footer__arrow {
-        width: 30px;
-        height: 30px;
-        margin-left: 16px;
-    }
-
     &__card {
+
+        // Different styles for placing options
+        &.vertical {
+            grid-column: span 4;
+            grid-row: span 7;
+        }
+
+        &.horizontal {
+            grid-column: span 8;
+            grid-row: span 5;
+        }
+
+        &.big {
+            grid-column: span 12;
+            grid-row: span 7;
+        }
+
         color: #D5D7D4;
         display: grid;
         grid-template-rows: auto 1fr auto;
+
+        &:hover {
+            .works__card__footer {
+                border-color: #D5D7D4;
+            }
+        }
 
         &-name {
             font-size: 1.5rem;
@@ -33,7 +54,7 @@
             margin-bottom: 1.25rem;
             position: relative;
             // overflow: hidden;
-    
+
             // filter: brightness(0) invert(1);
             // border-radius: 5px;
             cursor: pointer;
@@ -53,15 +74,72 @@
             align-items: center;
             position: relative;
             text-decoration: none;
-            padding: 10px 0 14px;
+            padding: 10px 0;
             font-size: 0.875rem;
+            //overflow: hidden;
+            border-top: 1px dotted #808080;
+            border-bottom: 1px dotted #808080;
+            //transition: border-color 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
+            transition: .5s;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+
+
+            @mixin line-animation {
+                content: "";
+                position: absolute;
+                transition: width 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s, height 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
+                background-color: #D5D7D4;
+                height: 1px;
+            }
+
+            //&::before {
+            //    @include line-animation;
+            //    right: 0;
+            //    top: 0;
+            //    width: 100%;
+            //    height: 1px;
+            //}
+            //
+            //&::after {
+            //    @include line-animation;
+            //    right: 0;
+            //    top: 0;
+            //    width: 1px;
+            //    height: 0;
+            //}
+            //
+            //&-container {
+            //    position: relative;
+            //
+            //    &::before {
+            //        @include line-animation;
+            //        left: 0;
+            //        bottom: 0;
+            //        width: 100%;
+            //        height: 1px;
+            //    }
+            //
+            //    &::after {
+            //        @include line-animation;
+            //        left: 0;
+            //        bottom: 0;
+            //        width: 1px;
+            //        height: 0;
+            //    }
+            //}
         }
+
     }
 
-    @include card-grid-position(1, 4);
-    @include card-grid-position(2, 3, 2);
-    @include card-grid-position(3, 4, 3);
-    @include card-grid-position(4, 3, 2);
+    &__card__footer__arrow {
+        width: 30px;
+        height: 30px;
+        margin-left: 16px;
+    }
+
 }
 
 // TODO make background shadow on hover
