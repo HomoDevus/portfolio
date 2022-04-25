@@ -1,0 +1,29 @@
+@media only screen and (max-width: 800px) {
+  .tools__heading {
+    margin-bottom: 14px;
+  }
+
+  .tools__heading-text {
+    font-size: 0.75rem;
+    padding: 0 30px;
+  }
+
+  .tools__text {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tools__heading {
+    margin-bottom: 10px;
+  }
+
+  .tools__heading-text {
+    font-size: 0.625rem;
+    padding: 0 20px;
+  }
+
+  .tools__text {
+    font-size: 1.5rem;
+  }
+}
