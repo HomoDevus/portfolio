@@ -1,7 +1,7 @@
 import React from "react";
-import '../componentStyles/withHtml.css'
+import './withHtml.css'
 
-function WithHtml({children, element, attributes, atributeValues}) {
+function WithHtml({children, element, attributes}) {
     let attributeElements = []
 
     if (attributes) {

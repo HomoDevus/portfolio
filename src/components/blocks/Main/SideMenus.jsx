@@ -1,4 +1,4 @@
-import LangToggleButton from "../../LangToggleButton";
+import LangToggleButton from "./LangToggleButton";
 import {useContext, useLayoutEffect, useState} from "react";
 import {Context} from "../../../context/ContextProvider";
 

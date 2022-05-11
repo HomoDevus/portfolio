@@ -1,8 +1,9 @@
 import './css/index.css';
 import ContextProvider from "./context/ContextProvider";
-import WorkCard from "./components/WorkCard";
-import Tools from "./components/Tools";
-import Main from "./components/blocks/main/Main";
+import WorkCard from "./components/blocks/Works/WorkCard";
+import Tools from "./components/blocks/Works/Tools";
+import Main from "./components/blocks/Main/Main";
+import WorkPlaces from "./components/blocks/WorkPlaces/WorkPlaces";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <WorkCard placingClass={'vertical'}/>
       </div>
       <Tools/>
+      <WorkPlaces />
     </ContextProvider>
   );
 }

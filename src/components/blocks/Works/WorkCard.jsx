@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow from '../img/arrow_icon.svg'
+import arrow from '../../../img/arrow_icon.svg'
 // import wordCounter from '../img/word-counter.gif'
 
 export default function WorkCard({placingClass}) {

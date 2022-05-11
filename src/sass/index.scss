@@ -1,8 +1,9 @@
-@import './works';
 @import './App';
-@import './tools';
+@import '../components/blocks/Works/sass/works';
+@import '../components/blocks/Works/sass/tools';
+@import '../components/blocks/WorkPlaces/sass/wrok-places';
 
 // Adaptation
-@import "./adaptation/works";
-@import "./adaptation/main";
-@import "./adaptation/tools";
+@import "../components/blocks/Works/sass/adaptation/works";
+@import "../components/blocks/Main/adaptation/main";
+@import "../components/blocks/Works/sass/adaptation/tools";

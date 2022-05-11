@@ -1,6 +1,6 @@
-@import 'config';
-@import 'keyframes';
-@import 'variables';
+@import '../../../../sass/config';
+@import '../../../../sass/keyframes';
+@import '../../../../sass/variables';
 
 .works {
     background-color: $black;
@@ -58,6 +58,7 @@
             // filter: brightness(0) invert(1);
             // border-radius: 5px;
             cursor: pointer;
+            min-height: 140px;
         }
 
         &__top {

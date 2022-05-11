@@ -1,0 +1,103 @@
+.work-places {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 4fr;
+  grid-template-rows: 80px repeat(12, auto) 80px;
+  grid-auto-flow: column;
+  justify-content: left;
+  background-color: #93748A;
+  color: white;
+
+  &__timing__year {
+    font-size: 4rem;
+  }
+
+  .timing__item {
+    text-align: right;
+  }
+
+  h4.timing__item {
+    align-self: center;
+  }
+
+  h2, h4 {
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  &__timing {
+    &__left-padding {
+      grid-row: 1 / -1;
+    }
+
+    &__right-padding {
+      grid-row: 1 / -1;
+    }
+  }
+
+  .timing__months-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p:not(:last-child) {
+      margin-bottom: 1.25em;
+    }
+  }
+
+  &__time-line {
+    width: 6px;
+    background-color: white;
+    margin: 0 50px 0 30px;
+    grid-row: 1 / -1;
+  }
+
+  .work-place {
+    &__position {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    &__company-name {
+      font-size: 4rem;
+      line-height: 1;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: white;
+        left: -65px;
+        top: calc(50% - 12px);
+      }
+
+      a {
+        color: white;
+
+        &:before {
+          background-color: white;
+          height: 4px;
+          opacity: 1;
+        }
+
+        &:after {
+          height: 4px;
+        }
+      }
+    }
+
+    &__description {
+      max-width: 600px;
+      margin: 1.375em 0 3.5em;
+    }
+  }
+}
