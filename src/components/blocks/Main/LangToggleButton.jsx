@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
+import i18next from "i18next";
 
-function langToggleButton({lang, setLang, buttonLang}) {
+function LangToggleButton({lang, setLang, buttonLang}) {
+    useEffect(() => {
+        i18next.changeLanguage(lang)
+    }, [lang])
+
     function langChange() {
         if (buttonLang !== lang) {
             setLang(buttonLang)
@@ -20,4 +25,4 @@ function langToggleButton({lang, setLang, buttonLang}) {
     )
 }
 
-export default langToggleButton
+export default LangToggleButton

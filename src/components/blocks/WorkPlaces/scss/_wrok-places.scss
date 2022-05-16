@@ -32,12 +32,9 @@
   }
 
   &__timing {
-    &__left-padding {
+    &__left-padding, &__right-padding {
       grid-row: 1 / -1;
-    }
-
-    &__right-padding {
-      grid-row: 1 / -1;
+      min-width: 40px;
     }
   }
 
@@ -47,7 +44,7 @@
     justify-content: space-around;
 
     p:not(:last-child) {
-      margin-bottom: 1.25em;
+      margin-bottom: 0.625em;
     }
   }
 
@@ -66,7 +63,7 @@
 
     &__company-name {
       font-size: 4rem;
-      line-height: 1;
+      line-height: 0.9;
       position: relative;
 
       &:before {
@@ -96,7 +93,7 @@
     }
 
     &__description {
-      max-width: 600px;
+      max-width: 50ch;
       margin: 1.375em 0 3.5em;
     }
   }

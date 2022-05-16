@@ -25,10 +25,10 @@ export default function SideMenus({children}) {
       <aside className='landing__left-links__outer'>
         <nav className='landing__left-links'>
           <div className='landing__link-outer top left'>
-            <a href="#work">WORKS</a>
+            <a className='link' href="#work">WORKS</a>
           </div>
           <div className='landing__link-outer bottom left'>
-            <a href="#about">ABOUT</a>
+            <a className='link' href="#about">ABOUT</a>
           </div>
         </nav>
       </aside>
@@ -40,7 +40,7 @@ export default function SideMenus({children}) {
             <LangToggleButton lang={language} setLang={setLanguage} buttonLang={'EN'}/>
           </div>
           <div className='landing__mail-link landing__link-outer bottom right'>
-            <a href="mailto:lavrovslava207@gmail.com" onClick={
+            <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
               () => {
                 navigator.clipboard.writeText(this.state.textToCopy)
               }
@@ -53,9 +53,9 @@ export default function SideMenus({children}) {
     <>
       <header className='landing__mobile-header'>
         <div className='landing__mobile-header__links'>
-          <a href='#work'>WORK</a>
-          <a href='#about'>ABOUT</a>
-          <a href="mailto:lavrovslava207@gmail.com" onClick={
+          <a className='link' href='#work'>WORK</a>
+          <a className='link' href='#about'>ABOUT</a>
+          <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
             () => {
               navigator.clipboard.writeText(this.state.textToCopy)
             }

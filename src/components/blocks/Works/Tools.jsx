@@ -20,7 +20,6 @@ export default function Tools() {
                     </p>
                 </div>
             </div>
-            <br className='tools__bottom-line'/>
         </div>
     )
 }

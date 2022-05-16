@@ -1,31 +1,51 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import arrow from '../../../img/arrow_icon.svg'
-// import wordCounter from '../img/word-counter.gif'
 
-export default function WorkCard({placingClass}) {
+export default function WorkCard({
+  placingClass,
+  recordingURL,
+  title,
+  description,
+  projectURL,
+  dates
+}) {
+  const videoElement = useRef(null)
+
     return (
         <div className={`works__card ${placingClass}`}>
             <div className='works__card__top'>
-                <div className='works__card-name'>Minesweeper</div>
-                <p className='works__card-date'>00 / 00</p>
+                <div className='works__card-name'>{title}</div>
+                <p className='works__card-date'>{dates}</p>
             </div>
-            <div className='works__card__gif-cover glow'>
-                {/* <img alt="project gif" src={wordCounter} /> */}
-                {/*<div className='works__card__gif'></div>*/}
-                {/*<div className='works__card__gif-cover__text'>*/}
-                {/*    Aenean convallis ultricies mollis. In hac habitasse platea dictumst. Cras metus enim,*/}
-                {/*    mattis quis lacus id, dapibus pulvinar orci. Interdum et malesuada fames ac ante ipsum*/}
-                {/*    primis in faucibus. Proin laoreet sit amet lorem a vestibulum. Nulla quis consectetur ligula.*/}
-                {/*    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.*/}
-                {/*    Maecenas vitae malesuada justo, a eleifend purus.*/}
-                {/*</div>*/}
-            </div>
+            <a
+              href={projectURL}
+              target='_blank'
+              className='works__card__gif-cover glow'
+              onMouseEnter={() => {
+                if (videoElement.current) {videoElement.current.play()}
+              }}
+              onMouseLeave={() => {
+                if (videoElement.current) {videoElement.current.pause()}
+              }}
+            >
+              <svg xmlns='http://www.w3.org/2000/svg' className="works__card__noise">
+                <filter id='noiseFilter'>
+                  <feTurbulence
+                    type='fractalNoise'
+                    baseFrequency='1'
+                    numOctaves='6'
+                    stitchTiles='stitch'/>
+                </filter>
+
+                <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+              </svg>
+              <video loop ref={videoElement}>
+                <source src={recordingURL} type="video/mp4" />
+              </video>
+            </a>
             <div className='works__card__footer-container'>
                 <div className='works__card__footer'>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida fermentum ultricies.
-                        In vel lacus sem.
-                    </p>
+                    <p>{description}</p>
                     <img alt="left arrow" src={arrow} className='works__card__footer__arrow'/>
                 </div>
             </div>

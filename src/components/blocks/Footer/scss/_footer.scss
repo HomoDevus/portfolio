@@ -1,0 +1,48 @@
+.footer {
+  padding: 120px 140px 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+
+  h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+  }
+
+  &__about-me {
+    margin-right: 40px;
+
+    p {
+      max-width: 45ch;
+    }
+  }
+
+  &__contacts__items-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    grid-gap: 25px 80px;
+  }
+
+  &__contacts__item {
+    display: flex;
+    align-items: center;
+    width: min-content;
+
+    &__icon {
+      width: 18px;
+      margin-right: 12px;
+    }
+
+    &__arrow {
+      width: 22px;
+      margin-left: 12px;
+
+      &.top-right-arrow {
+        transform: rotate(224deg);
+      }
+    }
+  }
+}
