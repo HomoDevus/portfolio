@@ -19,6 +19,7 @@ export default function WorkPlaces() {
         <p className='timing__item'>March</p>
         <p className='timing__item'>April</p>
         <p className='timing__item'>May</p>
+        <p className='timing__item'>June</p>
       </div>
       <div className='work-places__time-line'/>
       <Place

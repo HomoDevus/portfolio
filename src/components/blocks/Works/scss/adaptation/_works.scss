@@ -10,13 +10,13 @@
 
 @media only screen and (max-width: 1000px) {
   .works {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: calc(100vw - (100vw / 3));
     padding: 120px 40px;
 
     &__card {
       &.horizontal, &.big {
-        grid-column: span 1;
+        grid-column: span 2;
         grid-row: span 1;
       }
 
@@ -29,21 +29,17 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .works__card.vertical {
-    grid-row: span 2;
+  .works {
+    grid-template-columns: 1fr;
+
+    &__card {
+      &.horizontal, &.big {
+        grid-column: span 1;
+      }
+
+      &.vertical {
+        grid-row: span 2;
+      }
+    }
   }
 }
-
-//@media only screen and (max-width: 1200px) {
-//  .works__card {
-//    &.vertical {
-//      grid-column: span 3;
-//      grid-row: 4;
-//    }
-//
-//    &.horizontal {
-//      grid-column: span 5;
-//
-//    }
-//  }
-//}

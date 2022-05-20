@@ -3,7 +3,7 @@ export default function Place({companyName, position, description, websiteHref, 
     <>
       <p className='work-place__position' style={{gridRow: startRow}}>{position}</p>
       <h3 className='work-place__company-name'>
-        <a href={websiteHref}>{companyName}</a>
+        <a className='link' href={websiteHref}>{companyName}</a>
       </h3>
       <p className='work-place__description'>{description}</p>
     </>

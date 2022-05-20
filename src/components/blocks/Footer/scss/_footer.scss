@@ -24,6 +24,21 @@
     grid-template-rows: auto auto;
     grid-auto-flow: column;
     grid-gap: 25px 80px;
+
+    a.footer-link {
+      text-decoration: none;
+    }
+
+    a.link {
+      transition: font-variation-settings linear 0.2s;
+      font-variation-settings: 'slnt' 0;
+      letter-spacing: normal;
+
+      &:hover {
+        letter-spacing: normal;
+        font-variation-settings: 'slnt' -10;
+      }
+    }
   }
 
   &__contacts__item {

@@ -32,8 +32,11 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-a, .language-toggle-button {
+a {
   color: $black;
+}
+
+a.link, .language-toggle-button {
   transition: all linear 0.2s;
   font-variation-settings: 'wght' 300;
   letter-spacing: 0em;
@@ -157,7 +160,7 @@ a, .language-toggle-button {
 
 // Rainbow styling for links on hover
 
-a, .link {
+a.link {
   position: relative;
   text-decoration: none;
 

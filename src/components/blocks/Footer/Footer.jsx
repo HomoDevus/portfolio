@@ -15,31 +15,31 @@ export default function Footer() {
       <div className='footer__contacts'>
         <h6>Contacts</h6>
         <div className='footer__contacts__items-container'>
-          <div className='footer__contacts__item'>
+          <a href='#' className='footer-link footer__contacts__item'>
             <img src={github} alt='github icon' className='footer__contacts__item__icon' />
             <a className='link' href='#'>GitHub</a>
             <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
-          </div>
-          <div className='footer__contacts__item'>
+          </a>
+          <a href='#' className='footer-link footer__contacts__item'>
             <img src={telegram} alt='telegram icon' className='footer__contacts__item__icon' />
             <a className='link' href='#'>Telegram</a>
             <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
-          </div>
-          <div className='footer__contacts__item'>
+          </a>
+          <a href='#' className='footer-link footer__contacts__item'>
             <img src={linkedin} alt='linkedin icon' className='footer__contacts__item__icon' />
             <a className='link' href='#'>LinkedIn</a>
             <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
-          </div>
-          <div className='footer__contacts__item'>
+          </a>
+          <a href='#' className='footer-link footer__contacts__item'>
             <a className='link' href='#'>Resume</a>
             <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow' />
-          </div>
-          <div className='footer__contacts__item'>
+          </a>
+          <a href='#' className='footer-link footer__contacts__item'>
             <a className='link' href='tel:+79805263597' style={{whiteSpace: 'nowrap'}}>+7 (980) 526 35 97</a>
-          </div>
-          <div className='footer__contacts__item'>
+          </a>
+          <a href='#' className='footer-link footer__contacts__item'>
             <a className='link' href='mailto:lavrovslava207@gmail.com'>lavrovslava207@gmail.com</a>
-          </div>
+          </a>
         </div>
       </div>
     </footer>
