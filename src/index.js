@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/consolas/CONSOLA.TTF';
-import './i18nextConf';
 
 ReactDOM.render(
   <React.StrictMode>
