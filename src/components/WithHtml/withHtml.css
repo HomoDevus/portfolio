@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Consolas";
     src: local("Consolas"),
-        url("../../fonts/consolas/CONSOLA.TTF") format("truetype");
+        url("../../assets/fonts/consolas/CONSOLA.TTF") format("truetype");
     font-weight: normal;
 }
 
 code {
-    font-family: Consolas;
+    font-family: Consolas, serif;
     font-size: 0.75rem;
 }
 

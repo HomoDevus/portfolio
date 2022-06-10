@@ -1,10 +1,12 @@
 import LangToggleButton from "./LangToggleButton";
-import {useContext, useLayoutEffect, useState} from "react";
-import {Context} from "../../../context/ContextProvider";
+import { useContext, useLayoutEffect, useState } from "react";
+import { Context } from "../../../context/ContextProvider";
+import { LOCALES } from "../../../assets/languages/locales";
+import { FormattedMessage } from "react-intl";
 
-export default function SideMenus({children}) {
-  let {language, setLanguage} = useContext(Context)
-  let [windowWidth, setWindowWidth] = useState(window.innerWidth)
+export default function SideMenus({ children }) {
+  const { language, setLanguage } = useContext(Context)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useLayoutEffect(() => {
     function updateWindowWidth() {
@@ -18,17 +20,15 @@ export default function SideMenus({children}) {
     }
   })
 
-  console.log(windowWidth)
-
   return windowWidth > 600 ? (
     <>
       <aside className='landing__left-links__outer'>
         <nav className='landing__left-links'>
           <div className='landing__link-outer top left'>
-            <a className='link' href="#work">WORKS</a>
+            <a className='link' href="#work"><FormattedMessage id='menu_works' /></a>
           </div>
           <div className='landing__link-outer bottom left'>
-            <a className='link' href="#about">ABOUT</a>
+            <a className='link' href="#about"><FormattedMessage id='menu_about' /></a>
           </div>
         </nav>
       </aside>
@@ -36,15 +36,15 @@ export default function SideMenus({children}) {
       <aside className='landing__right-links__outer'>
         <nav className='landing__right-links'>
           <div className='language-toggler landing__link-outer top right'>
-            <LangToggleButton lang={language} setLang={setLanguage} buttonLang={'RU'}/>
-            <LangToggleButton lang={language} setLang={setLanguage} buttonLang={'EN'}/>
+            <LangToggleButton lang={language} setLang={setLanguage} buttonLang={LOCALES.RUSSIAN} />
+            <LangToggleButton lang={language} setLang={setLanguage} buttonLang={LOCALES.ENGLISH} />
           </div>
           <div className='landing__mail-link landing__link-outer bottom right'>
             <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
               () => {
                 navigator.clipboard.writeText(this.state.textToCopy)
               }
-            }>MAIL</a>
+            }><FormattedMessage id='menu_mail' /></a>
           </div>
         </nav>
       </aside>
@@ -53,18 +53,18 @@ export default function SideMenus({children}) {
     <>
       <header className='landing__mobile-header'>
         <div className='landing__mobile-header__links'>
-          <a className='link' href='#work'>WORK</a>
-          <a className='link' href='#about'>ABOUT</a>
+          <a className='link' href='#work'><FormattedMessage id='menu_works' /></a>
+          <a className='link' href='#about'><FormattedMessage id='menu_about' /></a>
           <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
             () => {
               navigator.clipboard.writeText(this.state.textToCopy)
             }
-          }>MAIL</a>
-          <div className='landing__mobile-header__separator'/>
+          }><FormattedMessage id='menu_mail' /></a>
+          <div className='landing__mobile-header__separator' />
         </div>
         <div className='landing__mobile-header__language language-toggle-button'>
-          <LangToggleButton lang={language} setLang={setLanguage} buttonLang={'RU'}/>
-          <LangToggleButton lang={language} setLang={setLanguage} buttonLang={'EN'}/>
+          <LangToggleButton lang={language} setLang={setLanguage} buttonLang={LOCALES.RUSSIAN} />
+          <LangToggleButton lang={language} setLang={setLanguage} buttonLang={LOCALES.ENGLISH} />
         </div>
       </header>
       {children}

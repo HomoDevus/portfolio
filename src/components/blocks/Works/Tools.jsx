@@ -1,5 +1,5 @@
-const TOOLS = ['HTML', 'CSS', 'Java Script', 'Type Script', 'React', 'Figma', 'Git', 'SCSS', 'Redux', 'Redux Saga', 'Bootstrap', 'PWA', 'React Router']
-
+import { FormattedMessage } from "react-intl";
+import {TOOLS} from "../../../constants";
 
 
 export default function Tools() {
@@ -7,7 +7,7 @@ export default function Tools() {
         <div className='tools'>
             <div className='tools__heading'>
                 <div className='tools__heading-line'/>
-                <div className='tools__heading-text'>technologies I use</div>
+                <div className='tools__heading-text'><FormattedMessage id='technologies' /></div>
                 <div className='tools__heading-line'/>
             </div>
             <div className='tools__text wrapper'>

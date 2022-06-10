@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import arrow from '../../../img/arrow_icon.svg'
+import arrow from '../../../assets/img/arrow_icon.svg'
 
 export default function WorkCard({
   placingClass,
@@ -20,6 +20,7 @@ export default function WorkCard({
             <a
               href={projectURL}
               target='_blank'
+              rel="noreferrer"
               className='works__card__gif-cover glow'
               onMouseEnter={() => {
                 if (videoElement.current) {videoElement.current.play()}

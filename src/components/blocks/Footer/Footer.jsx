@@ -1,44 +1,45 @@
-import arrowIcon from '../../../img/Arrow 5.svg';
-import github from '../../../img/github.svg';
-import telegram from '../../../img/telegram.svg'
-import linkedin from '../../../img/icons8-linkedin-circled.svg'
+import arrowIcon from '../../../assets/img/Arrow 5.svg';
+import github from '../../../assets/img/github.svg';
+import telegram from '../../../assets/img/telegram.svg'
+import linkedin from '../../../assets/img/icons8-linkedin-circled.svg'
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export default function Footer() {
+  const Intl = useIntl()
+
   return (
-    <footer className='footer'>
-      <div className='footer__about-me'>
-        <h6>About me</h6>
-        <p>art direction, experience and interface design (ux-ui), product design, design systems and component
-          libraries,
-          branding and identities, motion design, and more.</p>
+    <footer className="footer">
+      <div className="footer__about-me">
+        <h6><FormattedMessage id="about_me_title" /></h6>
+        <p><FormattedMessage id="about_me_text" /></p>
       </div>
-      <div className='footer__contacts'>
-        <h6>Contacts</h6>
-        <div className='footer__contacts__items-container'>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <img src={github} alt='github icon' className='footer__contacts__item__icon' />
-            <a className='link' href='#'>GitHub</a>
-            <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
+      <div className="footer__contacts">
+        <h6><FormattedMessage id="contacts" /></h6>
+        <div className="footer__contacts__items-container">
+          <a href="#" className="footer-link footer__contacts__item">
+            <img src={github} alt="github icon" className="footer__contacts__item__icon" />
+            <p className="link">GitHub</p>
+            <img src={arrowIcon} alt="arrow icon" className="footer__contacts__item__arrow top-right-arrow" />
           </a>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <img src={telegram} alt='telegram icon' className='footer__contacts__item__icon' />
-            <a className='link' href='#'>Telegram</a>
-            <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
+          <a href="#" className="footer-link footer__contacts__item">
+            <img src={telegram} alt="telegram icon" className="footer__contacts__item__icon" />
+            <p className="link"><FormattedMessage id="telegram" /></p>
+            <img src={arrowIcon} alt="arrow icon" className="footer__contacts__item__arrow top-right-arrow" />
           </a>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <img src={linkedin} alt='linkedin icon' className='footer__contacts__item__icon' />
-            <a className='link' href='#'>LinkedIn</a>
-            <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow top-right-arrow' />
+          <a href="#" className="footer-link footer__contacts__item">
+            <img src={linkedin} alt="linkedin icon" className="footer__contacts__item__icon" />
+            <p className="link">LinkedIn</p>
+            <img src={arrowIcon} alt="arrow icon" className="footer__contacts__item__arrow top-right-arrow" />
           </a>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <a className='link' href='#'>Resume</a>
-            <img src={arrowIcon} alt='arrow icon' className='footer__contacts__item__arrow' />
+          <a href={Intl.formatMessage({ id: 'resume_href' })} className="footer-link footer__contacts__item">
+            <p className="link"><FormattedMessage id="resume" /></p>
+            <img src={arrowIcon} alt="arrow icon" className="footer__contacts__item__arrow" />
           </a>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <a className='link' href='tel:+79805263597' style={{whiteSpace: 'nowrap'}}>+7 (980) 526 35 97</a>
+          <a href="tel:+79805263597" className="footer-link footer__contacts__item">
+            <p className="link" style={{ whiteSpace: 'nowrap' }}>+7 (980) 526 35 97</p>
           </a>
-          <a href='#' className='footer-link footer__contacts__item'>
-            <a className='link' href='mailto:lavrovslava207@gmail.com'>lavrovslava207@gmail.com</a>
+          <a href="mailto:lavrovslava207@gmail.com" className="footer-link footer__contacts__item">
+            <p className="link">lavrovslava207@gmail.com</p>
           </a>
         </div>
       </div>
