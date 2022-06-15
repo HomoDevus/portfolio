@@ -29,7 +29,7 @@
       text-decoration: none;
     }
 
-    a.link {
+    a.link, .language-toggle-button {
       transition: font-variation-settings linear 0.2s;
       font-variation-settings: 'slnt' 0;
       letter-spacing: normal;

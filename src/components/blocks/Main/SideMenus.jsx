@@ -40,11 +40,7 @@ export default function SideMenus({ children }) {
             <LangToggleButton lang={language} setLang={setLanguage} buttonLang={LOCALES.ENGLISH} />
           </div>
           <div className='landing__mail-link landing__link-outer bottom right'>
-            <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
-              () => {
-                navigator.clipboard.writeText(this.state.textToCopy)
-              }
-            }><FormattedMessage id='menu_mail' /></a>
+            <a className='link' href="mailto:lavrovslava207@gmail.com"><FormattedMessage id='menu_mail' /></a>
           </div>
         </nav>
       </aside>
@@ -55,11 +51,7 @@ export default function SideMenus({ children }) {
         <div className='landing__mobile-header__links'>
           <a className='link' href='#work'><FormattedMessage id='menu_works' /></a>
           <a className='link' href='#about'><FormattedMessage id='menu_about' /></a>
-          <a className='link' href="mailto:lavrovslava207@gmail.com" onClick={
-            () => {
-              navigator.clipboard.writeText(this.state.textToCopy)
-            }
-          }><FormattedMessage id='menu_mail' /></a>
+          <a className='link' href="mailto:lavrovslava207@gmail.com"><FormattedMessage id='menu_mail' /></a>
           <div className='landing__mobile-header__separator' />
         </div>
         <div className='landing__mobile-header__language language-toggle-button'>
