@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import SideMenus from "./SideMenus";
 import { loremIpsum } from "lorem-ipsum";
 import { FormattedMessage } from "react-intl";

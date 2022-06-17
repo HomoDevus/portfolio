@@ -12,43 +12,46 @@ import virtualPianoRec from './assets/recordings/virtual-piano-recording.mp4';
 import wordCounterRec from './assets/recordings/word-counter-recording.mp4';
 import { LOCALES } from './assets/languages/locales';
 import { MESSAGES } from './assets/languages/messages';
+import ErrorBoundary from './ErrorBoundary';
 
 function App() {
   const { language } = useContext(Context)
 
   return (
-    <IntlProvider
-      locale={language}
-      defaultLocale={LOCALES.ENGLISH}
-      messages={MESSAGES[language]}
-      className="App"
-    >
-      <Main />
-      <div className="works" id="works">
-        <WorkCard
-          placingClass={'vertical'}
-          title='Minesweeper'
-          recordingURL={minesweeperRec}
-          key={1}
-          projectURL='https://itiseternity.github.io/Minesweeper_Hyperskill/'
-        />
-        <WorkCard
-          placingClass={'horizontal'}
-          recordingURL={virtualPianoRec}
-          key={2}
-          projectURL='https://itiseternity.github.io/VirtualPiano_Hyperskill/'
-        />
-        <WorkCard
-          placingClass={'big'}
-          key={3}
-          recordingURL={wordCounterRec}
-          projectURL='https://smart-word-counter.glitch.me/'
-        />
-      </div>
-      <Tools />
-      <WorkPlaces />
-      <Footer />
-    </IntlProvider>
+    <ErrorBoundary>
+      <IntlProvider
+        locale={language}
+        defaultLocale={LOCALES.ENGLISH}
+        messages={MESSAGES[language]}
+        className="App"
+      >
+        <Main />
+        <div className="works" id="works">
+          <WorkCard
+            placingClass={'vertical'}
+            title="Minesweeper"
+            recordingURL={minesweeperRec}
+            key={1}
+            projectURL="https://itiseternity.github.io/Minesweeper_Hyperskill/"
+          />
+          <WorkCard
+            placingClass={'horizontal'}
+            recordingURL={virtualPianoRec}
+            key={2}
+            projectURL="https://itiseternity.github.io/VirtualPiano_Hyperskill/"
+          />
+          <WorkCard
+            placingClass={'big'}
+            key={3}
+            recordingURL={wordCounterRec}
+            projectURL="https://smart-word-counter.glitch.me/"
+          />
+        </div>
+        <Tools />
+        <WorkPlaces />
+        <Footer />
+      </IntlProvider>
+    </ErrorBoundary>
   );
 }
 
