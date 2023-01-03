@@ -35,8 +35,8 @@
 .landing__mobile-header {
   background-color: white;
   position: fixed;
+  white-space: nowrap;
   min-width: calc(100vw - 28px);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -66,4 +66,8 @@
       font-size: 1.125rem;
     }
   }
+}
+
+.landing__mobile-header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }

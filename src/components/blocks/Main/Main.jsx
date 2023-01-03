@@ -1,17 +1,8 @@
 import React from 'react';
 import SideMenus from "./SideMenus";
-import { loremIpsum } from "lorem-ipsum";
 import { FormattedMessage } from "react-intl";
 import { useIntl } from "react-intl";
-
-const LOREM_IPSUM_OPTIONS = { count: 10 }
-let landingText = []
-let landingTextBeforeLastLine = loremIpsum(LOREM_IPSUM_OPTIONS)
-let landingTextLastLine = loremIpsum(LOREM_IPSUM_OPTIONS)
-
-for (let i = 0; i < 40; i++) {
-  landingText.push(<p key={i}>{loremIpsum(LOREM_IPSUM_OPTIONS)}</p>)
-}
+import { landingTextLastLine, landingTextBeforeLastLine, landingText } from '../../../constants';
 
 export default function Main() {
   const Intl = useIntl()
@@ -24,11 +15,11 @@ export default function Main() {
         <div className='landing__main-text-container'>
           <div className='landing__main-text'>
             {landingText}
-            {/*<span className='landing__main-text__heading' data-text='Slava&nbsp;Lavrov'>Slava&nbsp;Lavrov</span>*/}
             <p>
               Nam sceler
-              <span className='landing__main-text__heading'
-                    data-text='Suspe&nbsp;Praese'>Suspe&nbsp;Praese</span>
+              {/*<span className='landing__main-text__heading'*/}
+              {/*      data-text='Suspe&nbsp;Praese'>Suspe&nbsp;Praese</span>*/}
+              <span className='landing__main-text__heading' data-text='Slava&nbsp;Lavrov'>Slava&nbsp;Lavrov</span>
               pharetra consequat. Aliquam dapibus elementum risus vitae euismod.
               hendrerit id eget metus. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. in lorem et arcu facilisis eget

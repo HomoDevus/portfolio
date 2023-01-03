@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl';
 import { useContext } from 'react';
-import './css/index.css';
+import './css/index.min.css';
 import { Context } from './context/ContextProvider';
 import WorkCard from './components/blocks/Works/WorkCard';
 import Tools from './components/blocks/Works/Tools';
