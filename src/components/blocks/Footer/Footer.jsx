@@ -11,7 +11,16 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__about-me">
         <h6><FormattedMessage id="about_me_title" /></h6>
-        <p><FormattedMessage id="about_me_text" /></p>
+        <p><FormattedMessage
+          id="about_me_text"
+          values={{
+            school_name: <a
+              href="https://academy.yandex.ru/schools/frontend"
+              target="_blank"
+              rel="noreferrer">{Intl.formatMessage({ id: 'yandex_school_name' })}
+            </a>
+          }} />
+        </p>
       </div>
       <div className="footer__contacts">
         <h6><FormattedMessage id="contacts" /></h6>

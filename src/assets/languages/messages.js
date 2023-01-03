@@ -14,9 +14,9 @@ export const MESSAGES = {
       ' of the game is to clear a rectangular board containing hidden mines without detonating any of them, with' +
       ' help from clues about the number of neighboring mines in each field.',
     project_piano: 'Virtual Piano',
-    project_piano_description: "This is a virtual piano. Its feature is in the ability to automatically " +
-      "play thousand of melodies using 'pseudo notes' from the website that contains 'pseudo notes' for " +
-      "thousand of songs.",
+    project_piano_description: 'This is a virtual piano. Its feature is in the ability to automatically ' +
+      'play thousand of melodies using \'pseudo notes\' from the website that contains \'pseudo notes\' for ' +
+      'thousand of songs.',
     project_word_counter: 'Word Counter',
     project_word_counter_description: 'An app for word count that can help you learn English by getting the most' +
       ' used words in a book before reading. It works with .epub files. Its main feature is called "Smart Count"' +
@@ -36,7 +36,11 @@ export const MESSAGES = {
       'Build state management system with middleware that connected application to the backend API, using Redux Saga.',
     lexicom_href: 'https://lexicom.ai',
     about_me_title: 'About me',
-    about_me_text: '',
+    about_me_text: 'I\'m an inspired front-end developer. Sometimes I do web-design for my projects, like this website.' +
+      ' Currently, I code using TypeScript and React. I have' +
+      ' commercial experience in development and I also completed {school_name}. Right now I\'m an intern' +
+      ' at Yandex.',
+    yandex_school_name: 'Yandex developer school',
     contacts: 'Contacts',
     telegram: 'Telegram',
     resume: 'Resume',
@@ -75,9 +79,11 @@ export const MESSAGES = {
       'Разработал систему управления состояниям с middleware для отправки запросов на backend используя Redux Saga',
     lexicom_href: 'https://lexicom.ai',
     about_me_title: 'О себе',
-    about_me_text: 'art direction, experience and interface design (ux-ui), product design, design systems and component\n' +
-      '          libraries,\n' +
-      '          branding and identities, motion design, and more.',
+    about_me_text: 'Я frontend разработчик, иногда делаю дизайн для своих проектов, как например этот сайт. ' +
+      'Пишу код на TypeScript и React. У меня есть коммерческий опыт в разработки и pet проекты. ' +
+      'Я окончил школу разработки интерфейсов Яндекса и теперь стажируюсь здесь.' +
+      '',
+    yandex_school_name: 'школу разработки интерфейсов Яндекса',
     contacts: 'Контакты',
     telegram: 'Телеграм',
     resume: 'Резюме',

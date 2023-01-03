@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/fonts/consolas/CONSOLA.TTF';
-import ContextProvider from "./context/ContextProvider";
+import ContextProvider from './context/ContextProvider';
+import ErrorBoundary from './ErrorBoundary';
+import Intl from './Intl';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
-      <App />
+      <Intl>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </Intl>
     </ContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
