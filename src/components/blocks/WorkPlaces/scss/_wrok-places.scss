@@ -1,7 +1,7 @@
 .work-places {
   display: grid;
   grid-template-columns: 1fr auto auto auto 4fr;
-  grid-template-rows: 80px repeat(12, auto) 80px;
+  grid-template-rows: 80px repeat(13, auto) 80px;
   grid-auto-flow: column;
   justify-content: left;
   background-color: #93748A;
