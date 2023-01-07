@@ -37,22 +37,11 @@ a {
   transition: all linear 0.2s;
 }
 
-a:hover:not(:where(.link, .footer-link)) {
-  color: #93748A;
-}
-
 .link, .language-toggle-button, .footer-link {
   transition: all linear 0.2s;
   font-variation-settings: 'wght' 300;
   letter-spacing: 0em;
-
-  &:hover {
-    letter-spacing: -0.02em;
-    font-variation-settings: 'wght' 500;
-  }
 }
-
-// Rainbow styling for links on hover
 
 .link, .footer-link > p {
   position: relative;
@@ -68,7 +57,7 @@ a:hover:not(:where(.link, .footer-link)) {
     background-color: black;
     transition-duration: .35s;
     transition-timing-function: ease;
-    transition-property: background-position,transform;
+    transition-property: background-position, transform;
     z-index: 1;
     box-sizing: border-box;
   }
@@ -86,9 +75,22 @@ a:hover:not(:where(.link, .footer-link)) {
   }
 }
 
-.link:hover::after, .footer-link:hover > p::after {
-  transform: scaleX(1);
-  transform-origin: left center;
+@media (hover: hover) and (pointer: fine) {
+  .link, .language-toggle-button, .footer-link {
+    &:hover {
+      letter-spacing: -0.02em;
+      font-variation-settings: 'wght' 500;
+    }
+  }
+
+  .link:hover::after, .footer-link:hover > p::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  a:hover:not(:where(.link, .footer-link)) {
+    color: #93748A;
+  }
 }
 
 .landing-page {
@@ -158,13 +160,13 @@ a:hover:not(:where(.link, .footer-link)) {
 
 
   }
-  
+
   .landing__right-links {
     @extend %landing-links;
     animation: RightBarSlide $animation-rise .8s;
     align-items: center;
 
-    }
+  }
 
   .language-toggle-button {
     border: none;
@@ -177,7 +179,7 @@ a:hover:not(:where(.link, .footer-link)) {
 
     &.chosen {
       font-weight: 500;
-      color: black!important;
+      color: black !important;
     }
 
     #active-lang {

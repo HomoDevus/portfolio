@@ -1,7 +1,7 @@
 .work-places {
   display: grid;
   grid-template-columns: 1fr auto auto auto 4fr;
-  grid-template-rows: 80px repeat(13, auto) 80px;
+  grid-template-rows: 80px repeat(14, auto) 80px;
   grid-auto-flow: column;
   justify-content: left;
   background-color: #93748A;
@@ -97,6 +97,15 @@
     &__description {
       max-width: 50ch;
       margin: 1.375em 0 3.5em;
+    }
+
+    // Styles for individual workplace
+    &__yandex-internship > .work-place__position {
+      grid-row: 3;
+    }
+
+    &__shri > .work-place__description {
+      //grid-row: span 2;
     }
   }
 }

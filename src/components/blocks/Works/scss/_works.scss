@@ -2,219 +2,225 @@
 @import '../../../../sass/keyframes';
 @import '../../../../sass/variables';
 
+@media (hover: hover) and (pointer: fine) {
+  .works__card:hover {
+    .works__card__footer {
+      border-color: #D5D7D4;
+    }
+  }
+
+  .glow:hover {
+    &:hover {
+      &:before {
+        opacity: 1;
+        left: -3px;
+        top: -3px;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+      }
+
+      .works__card__noise {
+        opacity: 0;
+      }
+
+      & > video {
+        filter: grayscale(0);
+      }
+    }
+
+  }
+}
+
 .works {
-    background-color: $black;
+  background-color: $black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  //grid-auto-rows: 100px;
+  // Makes grid elements height equal to their width regardless of the width
+  grid-auto-rows: calc((100vw - (140px * 2) - (80px * 11)) / 12);
+  gap: $works-gap;
+  grid-auto-flow: dense;
+  padding: 120px 140px;
+
+  &__card {
+
+    // Different styles for placing options
+    &.vertical {
+      grid-column: span 4;
+      grid-row: span 7;
+    }
+
+    &.horizontal {
+      grid-column: span 8;
+      grid-row: span 5;
+    }
+
+    &.big {
+      grid-column: span 12;
+      grid-row: span 7;
+    }
+
+    color: #D5D7D4;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    //grid-auto-rows: 100px;
-    // Makes grid elements height equal to their width regardless of the width
-    grid-auto-rows: calc((100vw - (140px * 2) - (80px * 11)) / 12);
-    gap: $works-gap;
-    grid-auto-flow: dense;
-    padding: 120px 140px;
+    grid-template-rows: auto 1fr auto;
 
-    &__card {
-
-        // Different styles for placing options
-        &.vertical {
-            grid-column: span 4;
-            grid-row: span 7;
-        }
-
-        &.horizontal {
-            grid-column: span 8;
-            grid-row: span 5;
-        }
-
-        &.big {
-            grid-column: span 12;
-            grid-row: span 7;
-        }
-
-        color: #D5D7D4;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-
-        &:hover {
-            .works__card__footer {
-                border-color: #D5D7D4;
-            }
-        }
-
-        &-name {
-            font-size: 1.5rem;
-        }
-
-        &-date {
-            font-size: 0.875rem;
-        }
-
-        &__gif-cover {
-            background-color: #D5D7D4;
-            margin-bottom: 1.25rem;
-            position: relative;
-            cursor: pointer;
-            min-height: 140px;
-
-            .works__card__noise {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                border-radius: 8px;
-                transition: all 0.3s ease-out;
-                opacity: 0.5;
-                z-index: 2;
-            }
-
-            video {
-                transition: filter 0.3s ease-out;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 8px;
-                filter: grayscale(0.8);
-            }
-        }
-
-        &__top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 0.625rem;
-            position: relative;
-        }
-
-        &__footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            text-decoration: none;
-            padding: 10px 0;
-            font-size: 0.875rem;
-            //overflow: hidden;
-            border-top: 1px dotted #808080;
-            border-bottom: 1px dotted #808080;
-            //transition: border-color 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
-            transition: .5s;
-            transition-property: all;
-            transition-duration: 0.5s;
-            transition-timing-function: ease;
-            transition-delay: 0s;
-
-
-            @mixin line-animation {
-                content: "";
-                position: absolute;
-                transition: width 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s, height 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
-                background-color: #D5D7D4;
-                height: 1px;
-            }
-
-            //&::before {
-            //    @include line-animation;
-            //    right: 0;
-            //    top: 0;
-            //    width: 100%;
-            //    height: 1px;
-            //}
-            //
-            //&::after {
-            //    @include line-animation;
-            //    right: 0;
-            //    top: 0;
-            //    width: 1px;
-            //    height: 0;
-            //}
-            //
-            //&-container {
-            //    position: relative;
-            //
-            //    &::before {
-            //        @include line-animation;
-            //        left: 0;
-            //        bottom: 0;
-            //        width: 100%;
-            //        height: 1px;
-            //    }
-            //
-            //    &::after {
-            //        @include line-animation;
-            //        left: 0;
-            //        bottom: 0;
-            //        width: 1px;
-            //        height: 0;
-            //    }
-            //}
-        }
-
+    &-name {
+      font-size: 1.5rem;
     }
 
-    &__card__footer__arrow {
-        width: 30px;
-        height: 30px;
-        margin-left: 16px;
+    &-date {
+      font-size: 0.875rem;
     }
+
+    &__gif-cover {
+      background-color: #D5D7D4;
+      margin-bottom: 1.25rem;
+      position: relative;
+      cursor: pointer;
+      min-height: 140px;
+
+      .works__card__noise {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 8px;
+        transition: all 0.3s ease-out;
+        opacity: 0.5;
+        z-index: 2;
+      }
+
+      video {
+        transition: filter 0.3s ease-out;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        filter: grayscale(0.8);
+      }
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 0.625rem;
+      position: relative;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      padding: 10px 0;
+      font-size: 0.875rem;
+      //overflow: hidden;
+      border-top: 1px dotted #808080;
+      border-bottom: 1px dotted #808080;
+      //transition: border-color 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
+      transition: .5s;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+
+
+      @mixin line-animation {
+        content: "";
+        position: absolute;
+        transition: width 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s, height 0.5s cubic-bezier(0.4, 0, 0, 1) 0.05s;
+        background-color: #D5D7D4;
+        height: 1px;
+      }
+
+      //&::before {
+      //    @include line-animation;
+      //    right: 0;
+      //    top: 0;
+      //    width: 100%;
+      //    height: 1px;
+      //}
+      //
+      //&::after {
+      //    @include line-animation;
+      //    right: 0;
+      //    top: 0;
+      //    width: 1px;
+      //    height: 0;
+      //}
+      //
+      //&-container {
+      //    position: relative;
+      //
+      //    &::before {
+      //        @include line-animation;
+      //        left: 0;
+      //        bottom: 0;
+      //        width: 100%;
+      //        height: 1px;
+      //    }
+      //
+      //    &::after {
+      //        @include line-animation;
+      //        left: 0;
+      //        bottom: 0;
+      //        width: 1px;
+      //        height: 0;
+      //    }
+      //}
+    }
+
+  }
+
+  &__card__footer__arrow {
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+  }
 
 }
 
 // TODO make background shadow on hover
 .glow {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  border-radius: 10px;
+
+  &:before {
+    content: "";
+    background: $rainbow-gradient;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 400%;
+    z-index: -1;
+    animation: ImageGradient 4s linear infinite alternate;
+    opacity: 0;
     transition: all 0.3s ease-out;
     border-radius: 10px;
+    transform-origin: center;
+    transform: translateZ(0);
+    width: 100%;
+    height: 100%;
+  }
 
-    &:before {
-        content: "";
-        background: $rainbow-gradient;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: 400%;
-        z-index: -1;
-        animation: ImageGradient 4s linear infinite alternate;
-        opacity: 0;
-        transition: all 0.3s ease-out;
-        border-radius: 10px;
-        transform-origin: center;
-        transform: translateZ(0);
-        width: 100%;
-        height: 100%;
-    }
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e5e5e5;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+  }
 
-    &:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #e5e5e5;
-        left: 0;
-        top: 0;
-        border-radius: 8px;
-    }
-
-    &:hover {
-        &:before {
-            opacity: 1;
-            left: -3px;
-            top: -3px;
-            width: calc(100% + 6px);
-            height: calc(100% + 6px);
-        }
-
-        .works__card__noise {
-            opacity: 0;
-        }
-
-        & > video {
-            filter: grayscale(0);
-        }
-    }
-    &:active::after {
-        background: rgb(16, 16, 16);
-    }
+  &:active::after {
+    background: rgb(16, 16, 16);
+  }
 }
 
 /* Card text inside div for picture */
