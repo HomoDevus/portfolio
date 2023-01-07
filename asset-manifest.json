@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c02fc62a.css",
-    "main.js": "/portfolio/static/js/main.4f4d3dd6.js",
+    "main.css": "/portfolio/static/css/main.e4ffd2a6.css",
+    "main.js": "/portfolio/static/js/main.ba5eaf0c.js",
     "static/js/787.b9ec5bb0.chunk.js": "/portfolio/static/js/787.b9ec5bb0.chunk.js",
     "static/media/virtual-piano-recording.mp4": "/portfolio/static/media/virtual-piano-recording.ddb974b560cbbe9d8702.mp4",
     "static/media/word-counter-recording.mp4": "/portfolio/static/media/word-counter-recording.f34448128ad31a953a9c.mp4",
@@ -14,12 +14,12 @@
     "static/media/icons8-linkedin-circled.svg": "/portfolio/static/media/icons8-linkedin-circled.f1102ee53a4249dbece53f44777fdc29.svg",
     "static/media/arrow_icon.svg": "/portfolio/static/media/arrow_icon.d63e4db92c02700f653caf8f24c4931f.svg",
     "static/media/Arrow 5.svg": "/portfolio/static/media/Arrow 5.f5b1cfa9e225cdb77004ac425943a64c.svg",
-    "main.c02fc62a.css.map": "/portfolio/static/css/main.c02fc62a.css.map",
-    "main.4f4d3dd6.js.map": "/portfolio/static/js/main.4f4d3dd6.js.map",
+    "main.e4ffd2a6.css.map": "/portfolio/static/css/main.e4ffd2a6.css.map",
+    "main.ba5eaf0c.js.map": "/portfolio/static/js/main.ba5eaf0c.js.map",
     "787.b9ec5bb0.chunk.js.map": "/portfolio/static/js/787.b9ec5bb0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c02fc62a.css",
-    "static/js/main.4f4d3dd6.js"
+    "static/css/main.e4ffd2a6.css",
+    "static/js/main.ba5eaf0c.js"
   ]
 }
