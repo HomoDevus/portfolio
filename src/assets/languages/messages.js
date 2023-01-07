@@ -26,7 +26,7 @@ export const MESSAGES = {
       ' its ability to count words by their root (words with different forms count as the same one).',
     technologies: 'technologies I use',
     yandex_title: 'Yandex',
-    yandex_position: 'Tester Accessor',
+    yandex_position: 'Tester-assessor',
     yandex_description:
       'Tested browser, mobile applications, web sites API’s using web debugging proxy tools ' +
       'to mock and modify applications requests.',
