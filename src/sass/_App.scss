@@ -83,21 +83,39 @@ a {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+
+.link, .language-toggle-button, .footer-link {
+  &:hover {
+    letter-spacing: -0.02em;
+    font-variation-settings: 'wght' 500;
+  }
+}
+
+.link:hover::after, .footer-link:hover > p::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+a:hover:not(:where(.link, .footer-link)) {
+  color: #93748A;
+}
+
+// Using not because otherwise rules won't be applied if browser don't support (hover: hover)
+@media not ((hover: hover) and (pointer: fine))  {
   .link, .language-toggle-button, .footer-link {
     &:hover {
-      letter-spacing: -0.02em;
-      font-variation-settings: 'wght' 500;
+      letter-spacing: normal;
+      font-variation-settings: 'wght' 300;
     }
   }
 
   .link:hover::after, .footer-link:hover > p::after {
-    transform: scaleX(1);
-    transform-origin: left center;
+    transform: scaleX(0);
+    transform-origin: right center;
   }
 
   a:hover:not(:where(.link, .footer-link)) {
-    color: #93748A;
+    color: inherit;
   }
 }
 
@@ -241,5 +259,17 @@ a {
 
   h1 {
     color: #2b2b2b;
+  }
+}
+
+@supports not (font-variation-settings: normal) {
+  .link, .language-toggle-button, .footer-link {
+    font-weight: 300;
+  }
+
+  .link, .language-toggle-button, .footer-link {
+    &:hover {
+      letter-spacing: 0em;
+    }
   }
 }

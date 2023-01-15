@@ -2,7 +2,34 @@
 @import '../../../../sass/keyframes';
 @import '../../../../sass/variables';
 
-@media (hover: hover) and (pointer: fine) {
+.works__card:hover {
+  .works__card__footer {
+    border-color: #D5D7D4;
+  }
+}
+
+.glow:hover {
+  &:hover {
+    &:before {
+      opacity: 1;
+      left: -3px;
+      top: -3px;
+      width: calc(100% + 6px);
+      height: calc(100% + 6px);
+    }
+
+    .works__card__noise {
+      opacity: 0;
+    }
+
+    & > video {
+      filter: grayscale(0);
+    }
+  }
+
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
   .works__card:hover {
     .works__card__footer {
       border-color: #D5D7D4;
@@ -12,19 +39,19 @@
   .glow:hover {
     &:hover {
       &:before {
-        opacity: 1;
-        left: -3px;
-        top: -3px;
-        width: calc(100% + 6px);
-        height: calc(100% + 6px);
+        opacity: 0;
+        left: auto;
+        top: auto;
+        width: auto;
+        height: auto;
       }
 
       .works__card__noise {
-        opacity: 0;
+        opacity: 1;
       }
 
       & > video {
-        filter: grayscale(0);
+        filter: unset;
       }
     }
 
