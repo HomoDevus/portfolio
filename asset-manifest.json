@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e4ffd2a6.css",
-    "main.js": "/portfolio/static/js/main.ba5eaf0c.js",
+    "main.css": "/portfolio/static/css/main.4209e0e0.css",
+    "main.js": "/portfolio/static/js/main.1a9356b7.js",
     "static/js/787.b9ec5bb0.chunk.js": "/portfolio/static/js/787.b9ec5bb0.chunk.js",
     "static/media/virtual-piano-recording.mp4": "/portfolio/static/media/virtual-piano-recording.ddb974b560cbbe9d8702.mp4",
+    "static/media/Slava Lavrov Frontend Developer. Resume.pdf": "/portfolio/static/media/Slava Lavrov Frontend Developer. Resume.e8ef291244db7b45dd64.pdf",
+    "static/media/Вячеслав Лавров Frontend разработчик. Резюме.pdf": "/portfolio/static/media/Вячеслав Лавров Frontend разработчик. Резюме.f3133e0bda3e8f34c62a.pdf",
     "static/media/word-counter-recording.mp4": "/portfolio/static/media/word-counter-recording.f34448128ad31a953a9c.mp4",
     "static/media/minesweeper-recording.mp4": "/portfolio/static/media/minesweeper-recording.951f6ab70dba856d1019.mp4",
-    "static/media/Inter.var.woff2?v=3.19": "/portfolio/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
+    "static/media/Inter.var.woff2": "/portfolio/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/CONSOLA.TTF": "/portfolio/static/media/CONSOLA.cd87e6528d4667aa9465.TTF",
     "static/media/telegram.svg": "/portfolio/static/media/telegram.59c752bc591e2bd2795aba9291d1091a.svg",
     "static/media/github.svg": "/portfolio/static/media/github.b0ae5e723b943374bff431ef3b85d974.svg",
@@ -14,12 +16,12 @@
     "static/media/icons8-linkedin-circled.svg": "/portfolio/static/media/icons8-linkedin-circled.f1102ee53a4249dbece53f44777fdc29.svg",
     "static/media/arrow_icon.svg": "/portfolio/static/media/arrow_icon.d63e4db92c02700f653caf8f24c4931f.svg",
     "static/media/Arrow 5.svg": "/portfolio/static/media/Arrow 5.f5b1cfa9e225cdb77004ac425943a64c.svg",
-    "main.e4ffd2a6.css.map": "/portfolio/static/css/main.e4ffd2a6.css.map",
-    "main.ba5eaf0c.js.map": "/portfolio/static/js/main.ba5eaf0c.js.map",
+    "main.4209e0e0.css.map": "/portfolio/static/css/main.4209e0e0.css.map",
+    "main.1a9356b7.js.map": "/portfolio/static/js/main.1a9356b7.js.map",
     "787.b9ec5bb0.chunk.js.map": "/portfolio/static/js/787.b9ec5bb0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4ffd2a6.css",
-    "static/js/main.ba5eaf0c.js"
+    "static/css/main.4209e0e0.css",
+    "static/js/main.1a9356b7.js"
   ]
 }
