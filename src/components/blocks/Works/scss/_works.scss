@@ -223,6 +223,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .works__card__footer__arrow {
+    display: none;
+  }
+}
+
 /* Card text inside div for picture */
 
 /*.works__card__gif-cover, .works__card__gif-cover__text {*/

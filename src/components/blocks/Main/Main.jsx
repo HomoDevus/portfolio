@@ -24,18 +24,18 @@ export default function Main() {
               eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. in lorem et
               arcu facilisis eget
             </p>
-            {landingTextBeforeLastLine}
+            <p>{landingTextBeforeLastLine}</p>
             <p>
               Praes semr
               <span
                 className="landing__main-text__heading"
                 data-text={Intl.formatMessage({ id: 'profession' })}
               >
-                                <FormattedMessage id="profession" />
-                            </span>
+                <FormattedMessage id="profession" />
+              </span>
               el in felis. Curabitur bibendum non sem non pretium.
             </p>
-            {landingTextLastLine}
+            <p>{landingTextLastLine}</p>
           </div>
         </div>
       </SideMenus>

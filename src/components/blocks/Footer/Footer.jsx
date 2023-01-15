@@ -89,6 +89,8 @@ export default function Footer() {
             <a
               href={Intl.formatMessage({ id: 'resume_href' })}
               className="footer-link footer__contacts__item"
+              target="_blank"
+              rel="noreferrer"
             >
               <p>
                 <FormattedMessage id="resume" />

@@ -1,25 +1,33 @@
 @import 'config';
 @import 'keyframes';
 
-@font-face {
-  font-family: 'Inter';
-  src: url('/src/assets/fonts/Inter/Inter.var.woff2') format('woff2 supports variations'),
-  url('/src/assets/fonts/Inter/Inter.var.woff2') format('woff2-variations');
-  font-variation-settings: normal;
-}
-
-@font-face {
-  font-family: 'Inter var experimental';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: oblique 0deg 10deg;
-  src: url("/src/assets/fonts/Inter/Inter.var.woff2?v=3.19") format("woff2");
-}
-
 
 @supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Inter var experimental';
+    font-weight: 200 500;
+    font-display: swap;
+    font-style: oblique 0deg 10deg;
+    src: url("/src/assets/fonts/Inter/Inter.var.woff2?v=3.19") format("woff2");
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/Inter/Inter.var.woff2') format('woff2 supports variations'),
+    url('/src/assets/fonts/Inter/Inter.var.woff2') format('woff2-variations');
+    font-variation-settings: normal;
+  }
+
   html {
-    font-family: 'Inter var experimental', sans-serif;
+    font-family: 'Inter var experimental', Inter, sans-serif;
+  }
+}
+
+@supports not (font-variation-settings: normal) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@500&display=swap');
+
+  html {
+    font-family: Inter, serif;
   }
 }
 
@@ -106,6 +114,7 @@ a {
 
   .landing__main-text {
     font-variation-settings: 'wght' 200;
+    font-weight: 200;
     font-size: 4rem;
     line-height: 1.2;
     position: absolute;

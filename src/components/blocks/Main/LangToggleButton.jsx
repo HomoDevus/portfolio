@@ -17,6 +17,7 @@ function LangToggleButton({ lang, setLang, buttonLang }) {
       className={`language-toggle-button ${isButtonChosen && 'chosen'} link`}
       id={lang === buttonLang ? 'active-lang' : ''}
       onClick={langChange}
+      lang={lang}
     >
       {buttonLang === LOCALES.RUSSIAN ? <FormattedMessage id="menu_lang_ru" /> : <FormattedMessage id="menu_lang_en" />}
     </button>

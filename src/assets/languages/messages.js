@@ -1,4 +1,6 @@
 import { LOCALES } from './locales'
+import resumeEn from '../img/Slava Lavrov Frontend Developer. Resume.pdf'
+import resumeRu from '../img/Вячеслав Лавров Frontend разработчик. Резюме.pdf'
 
 export const MESSAGES = {
   [LOCALES.ENGLISH]: {
@@ -59,7 +61,7 @@ export const MESSAGES = {
     contacts: 'Contacts',
     telegram: 'Telegram',
     resume: 'Resume',
-    resume_href: '#',
+    resume_href: resumeEn,
   },
   [LOCALES.RUSSIAN]: {
     name: 'Слава Лавров',
@@ -118,6 +120,6 @@ export const MESSAGES = {
     contacts: 'Контакты',
     telegram: 'Телеграм',
     resume: 'Резюме',
-    resume_href: '#',
+    resume_href: resumeRu,
   },
 }
