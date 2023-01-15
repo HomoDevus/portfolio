@@ -22,7 +22,7 @@ function App() {
                     placingClass={'vertical'}
                     recordingURL={minesweeperRec}
                     key={1}
-                    projectURL="https://itiseternity.github.io/Minesweeper_Hyperskill/"
+                    projectURL="https://homodevus.github.io/Minesweeper_Hyperskill/"
                 />
                 <WorkCard
                     title={Intl.formatMessage({ id: 'project_piano' })}
@@ -30,7 +30,7 @@ function App() {
                     placingClass={'horizontal'}
                     recordingURL={virtualPianoRec}
                     key={2}
-                    projectURL="https://itiseternity.github.io/VirtualPiano_Hyperskill/"
+                    projectURL="https://homodevus.github.io/VirtualPiano_Hyperskill/"
                 />
                 <WorkCard
                     title={Intl.formatMessage({ id: 'project_word_counter' })}
