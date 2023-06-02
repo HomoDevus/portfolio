@@ -1,5 +1,7 @@
-import Place from './Place'
 import { FormattedDate, useIntl } from 'react-intl'
+
+import Place from './Place'
+import './styles/wrok-places.scss'
 
 export default function WorkPlaces() {
   const Intl = useIntl()

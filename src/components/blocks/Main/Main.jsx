@@ -1,8 +1,9 @@
 import React from 'react'
+import { useIntl, FormattedMessage } from 'react-intl'
+
 import SideMenus from './SideMenus'
-import { FormattedMessage } from 'react-intl'
-import { useIntl } from 'react-intl'
 import { landingTextLastLine, landingTextBeforeLastLine, landingText } from '../../../constants'
+import './styles/adaptation/main.scss'
 
 export default function Main() {
   const Intl = useIntl()

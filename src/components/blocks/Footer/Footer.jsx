@@ -1,8 +1,10 @@
+import { FormattedMessage, useIntl } from 'react-intl'
+
 import arrowIcon from '../../../assets/img/Arrow 5.svg'
 import github from '../../../assets/img/github.svg'
 import telegram from '../../../assets/img/telegram.svg'
 import linkedin from '../../../assets/img/icons8-linkedin-circled.svg'
-import { FormattedMessage, useIntl } from 'react-intl'
+import './styles/footer.scss'
 
 export default function Footer() {
   const Intl = useIntl()
