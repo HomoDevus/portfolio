@@ -8,16 +8,16 @@ import ErrorBoundary from './ErrorBoundary'
 import Intl from './Intl'
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ContextProvider>
-            <Intl>
-                <ErrorBoundary>
-                    <App />
-                </ErrorBoundary>
-            </Intl>
-        </ContextProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
+  <React.StrictMode>
+    <ContextProvider>
+      <Intl>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </Intl>
+    </ContextProvider>
+  </React.StrictMode>,
+  document.getElementById('root'),
 )
 
 // If you want to start measuring performance in your app, pass a function

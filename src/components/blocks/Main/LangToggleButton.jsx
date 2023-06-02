@@ -1,6 +1,6 @@
 import React from 'react'
 import { LOCALES } from '../../../assets/languages/locales'
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 
 function LangToggleButton({ lang, setLang, buttonLang }) {
   function langChange() {
@@ -19,7 +19,11 @@ function LangToggleButton({ lang, setLang, buttonLang }) {
       onClick={langChange}
       lang={lang}
     >
-      {buttonLang === LOCALES.RUSSIAN ? <FormattedMessage id="menu_lang_ru" /> : <FormattedMessage id="menu_lang_en" />}
+      {buttonLang === LOCALES.RUSSIAN ? (
+        <FormattedMessage id='menu_lang_ru' />
+      ) : (
+        <FormattedMessage id='menu_lang_en' />
+      )}
     </button>
   )
 }
