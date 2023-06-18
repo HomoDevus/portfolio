@@ -13,13 +13,13 @@ export const MESSAGES = {
     menu_mail: 'MAIL',
     project_minesweeper: 'Minesweeper',
     project_minesweeper_description:
-      "It's a classical game written in JavaScript and React. The objective" +
+      'It\'s a classical game written in JavaScript and React. The objective' +
       ' of the game is to clear a rectangular board containing hidden mines without detonating any of them, with' +
       ' help from clues about the number of neighboring mines in each field.',
     project_piano: 'Virtual Piano',
     project_piano_description:
       'This is a virtual piano. Its feature is in the ability to automatically ' +
-      "play thousand of melodies using 'pseudo notes' from the website that contains 'pseudo notes' for " +
+      'play thousand of melodies using \'pseudo notes\' from the website that contains \'pseudo notes\' for ' +
       'thousand of songs.',
     project_word_counter: 'Word Counter',
     project_word_counter_description:
@@ -48,16 +48,18 @@ export const MESSAGES = {
       'We had lectures, seminars, and workshops from Yandex employees who work every day on services' +
       ' with a multi-million audience.\n After that, we worked on a team project under the guidance of a mentors.',
     shri_href: 'https://academy.yandex.ru/schools/frontend',
-    yandex_internship_title: 'Internship at Yandex',
-    yandex_internship_position: 'Frontend Developer at Infrastructure team',
+    yandex_internship_title: 'Yandex',
+    yandex_internship_position: 'Intern',
     yandex_internship_description:
-      'Three-month internship at infrastructure team.',
+      'Worked on the admin panel of E-com and ridetech services. Participated in the Agile cycle. Was doing a code review.' +
+      ' Made changes to the node.js middleware of the application. Fixed an authorization bug. Hid cookies in logging. ' +
+      'Optimized and refactored the project. Wrote a rule for the ESLinter. Set up http headers for iframe.',
     yandex_internship_href: 'https://yandex.ru/yaintern/',
     about_me_title: 'About me',
     about_me_text:
-      "I'm an inspired front-end developer. Sometimes I do web-design for my projects, like this website." +
+      'I\'m an inspired front-end developer. Sometimes I do web-design for my projects, like this website.' +
       ' Currently, I code using TypeScript and React. I have' +
-      " commercial experience in development and I also completed {school_name}. Right now I'm an intern" +
+      ' commercial experience in development and I also completed {school_name}. Right now I\'m an intern' +
       ' at Yandex.',
     yandex_school_name: 'Yandex developer school',
     contacts: 'Contacts',
@@ -109,10 +111,12 @@ export const MESSAGES = {
       'над сервисами с многомиллионной аудиторией.\n' +
       'Параллельно мы работали над командными проектами под руководством кураторов.',
     shri_href: 'https://academy.yandex.ru/schools/frontend',
-    yandex_internship_title: 'Стажировка в Яндекс',
-    yandex_internship_position: 'Frontend разработчик в команде инфраструктуры',
+    yandex_internship_title: 'Яндекс',
+    yandex_internship_position: 'Стажёр',
     yandex_internship_description:
-      'Трех месячная стажировка в команде инфраструктуры.',
+      'Работал над админ-панелью сервисов Екома и райдтеха. Участвовал в Agile цикле. Проводил код-ревью. ' +
+      'Внёс изменения в node.js middleware приложения. Исправил баг с авторизацией. ' +
+      'Скрыл cookie в логировании. Оптимизировал и рефакторил проект. Написал правило для линтера. Настроил http заголовки для iframe.',
     yandex_internship_href: 'https://yandex.ru/yaintern/',
     about_me_title: 'О себе',
     about_me_text:
